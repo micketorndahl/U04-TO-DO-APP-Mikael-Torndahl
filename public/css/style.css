@@ -1,0 +1,918 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+body {
+  background: linear-gradient(#2193b0, #6dd5ed);
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: rgb(255, 199, 79);
+  font-size: 9rem;
+  text-align: center;
+  opacity: 0.95;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: rgb(255, 199, 79);
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 187, 42) 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    rgb(255, 199, 79) 83.333%
+  );
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-simple-animation-rev 3.25s ease forwards;
+}
+
+.gradient-text:hover {
+  animation: rainbow-text-simple-animation 3.75s ease-in forwards;
+  transform: scale(1.01);
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  text-align: center;
+  opacity: 1;
+  margin: 2px;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.main-section {
+  background: transparent;
+  max-width: 500px;
+  width: 90%;
+  height: 400px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.edit {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: "Poppins";
+}
+
+.edit input {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: "Poppins";
+}
+
+.form-section {
+  width: 100%;
+  background: transparent;
+  margin: -100px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #6dd5ed;
+}
+
+.form-section input {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: "Poppins";
+}
+
+.form-section input:focus {
+  outline: none;
+  border: 1px solid rgb(255, 228, 109);
+}
+
+.form-section textarea {
+  display: block;
+  width: 90%;
+  height: 50px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: "Poppins";
+}
+
+.form-section textarea:focus {
+  outline: none;
+  border: 1px solid rgb(255, 228, 109);
+}
+
+.form-section input:hover {
+  transform: scale(1.01);
+  border-color: rgb(255, 187, 42);
+  border-radius: 10px;
+}
+
+.form-section textarea:hover {
+  transform: scale(1.01);
+  border-color: rgb(255, 187, 42);
+  border-radius: 10px;
+}
+
+.list {
+  position: absolute;
+  display: flex;
+  width: 100vh;
+  height: 100vh;
+  margin: -100px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.listContent1 {
+  position: relative;
+  display: flex;
+}
+
+.listContent2 {
+  position: relative;
+  display: flex;
+  margin: 40px;
+  padding: 5px;
+}
+
+.btn-list {
+  display: flex;
+  justify-content: center;
+
+  width: 20%;
+  height: 30px;
+  margin: 0px auto;
+  border: none;
+  outline: none;
+  background: #e16541;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btn-list1 {
+  display: block;
+  width: 70%;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  background: #e16541;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  width: 70%;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  background: #e16541;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.btn2 {
+  display: block;
+  width: 70%;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  background: #e16541;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  box-shadow: 0 1px 1px 0 rgb(255, 218, 95), 0 1px 2px 0 rgb(255, 238, 183);
+  transform: scale(1.01);
+  color: rgb(255, 254, 251);
+  border-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  -webkit-animation: color-change 6s ease-in;
+  -moz-animation: color-change 6s ease-in;
+  -o-animation: color-change 6s ease-in;
+  -ms-animation: color-change 6s ease-in;
+  animation: color-change 6s ease-in;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 243, 189);
+  }
+  20% {
+    color: rgb(255, 224, 183);
+  }
+  30% {
+    color: #ffd9a8;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(44, 100%, 79%);
+  }
+  70% {
+    color: #ffc979;
+  }
+  80% {
+    color: #ffd28e;
+  }
+  90% {
+    color: #ffcd9e;
+  }
+  93% {
+    color: #ffd9b6;
+  }
+  95% {
+    color: #ffead7;
+  }
+  97% {
+    color: #fff1d7;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+
+.btn-list:hover {
+  box-shadow: 0 1px 1px 0 rgb(255, 218, 95), 0 1px 2px 0 rgb(255, 238, 183);
+  transform: scale(1.01);
+  color: rgb(255, 254, 251);
+  border-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  -webkit-animation: color-change 6s ease-in;
+  -moz-animation: color-change 6s ease-in;
+  -o-animation: color-change 6s ease-in;
+  -ms-animation: color-change 6s ease-in;
+  animation: color-change 6s ease-in;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 243, 189);
+  }
+  20% {
+    color: rgb(255, 224, 183);
+  }
+  30% {
+    color: #ffd9a8;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(44, 100%, 79%);
+  }
+  70% {
+    color: #ffc979;
+  }
+  80% {
+    color: #ffd28e;
+  }
+  90% {
+    color: #ffcd9e;
+  }
+  93% {
+    color: #ffd9b6;
+  }
+  95% {
+    color: #ffead7;
+  }
+  97% {
+    color: #fff1d7;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+
+.btn-list1:hover {
+  box-shadow: 0 1px 1px 0 rgb(255, 218, 95), 0 1px 2px 0 rgb(255, 238, 183);
+  transform: scale(1.01);
+  color: rgb(255, 254, 251);
+  border-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  -webkit-animation: color-change 6s ease-in;
+  -moz-animation: color-change 6s ease-in;
+  -o-animation: color-change 6s ease-in;
+  -ms-animation: color-change 6s ease-in;
+  animation: color-change 6s ease-in;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 243, 189);
+  }
+  20% {
+    color: rgb(255, 224, 183);
+  }
+  30% {
+    color: #ffd9a8;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(44, 100%, 79%);
+  }
+  70% {
+    color: #ffc979;
+  }
+  80% {
+    color: #ffd28e;
+  }
+  90% {
+    color: #ffcd9e;
+  }
+  93% {
+    color: #ffd9b6;
+  }
+  95% {
+    color: #ffead7;
+  }
+  97% {
+    color: #fff1d7;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  10% {
+    color: rgb(255, 236, 236);
+  }
+  20% {
+    color: rgb(255, 218, 169);
+  }
+  30% {
+    color: #fdd29a;
+  }
+  40% {
+    color: #facb84;
+  }
+  50% {
+    color: #ffd3a9;
+  }
+  60% {
+    color: hsl(29, 100%, 75%);
+  }
+  70% {
+    color: #ffc773;
+  }
+  80% {
+    color: #f1bf72;
+  }
+  90% {
+    color: #ffc793;
+  }
+  95% {
+    color: #ffe3ca;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
